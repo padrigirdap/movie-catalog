@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Actors</title>
+  </head>
+
+  <body>
+
+    <% @actors.each do |actor| %>
+    <ul>
+      <li><a href="/actors/<%= actor["id"] %>"><%= "#{actor["name"]}" %></a></li>
+    </ul>
+    <% end %>
+
+  </body>
+</html>

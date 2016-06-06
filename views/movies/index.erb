@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Movies</title>
+  </head>
+
+  <body>
+
+    <% @movies.each do |movie| %>
+    <ul>
+      <li><a href="/movies/<%= movie["id"] %>"><%= "#{movie["title"]}" %></a></li>
+      <li>Year:<%= "#{movie["year"]}" %></li>
+      <li>Rating: <%= "#{movie["rating"]}" %></li>
+      <li><%= "#{movie["genre"]}" %></li>
+      <li><%= "#{movie["studio"]}" %></li>
+    </ul>
+    <% end %>
+
+  </body>
+</html>
